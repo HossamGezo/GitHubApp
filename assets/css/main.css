@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial;
+  height: 100vh;
+  background-color: #F1F5F9;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+.container {
+  width: 80%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #085C94;
+  padding: 25px;
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__head {
+  font-size: 40px;
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+.header .goback {
+  position: absolute;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  left: 100px;
+  bottom: 15px;
+  background-color: #FF0000;
+  color: #FFFFFF;
+  transition: 0.3s linear;
+}
+.header .goback:hover {
+  opacity: 0.8;
+}
+.header .goback:active {
+  opacity: 1;
+}
+.header .goback i {
+  margin-right: 5px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.content-left {
+  flex: 1;
+}
+.content-left__search-user {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #333333;
+  background-color: #FFFFFF;
+}
+.content-left__search-user--head {
+  background-color: #085C94;
+  color: #FFFFFF;
+  padding: 10px;
+  margin-bottom: -2px;
+}
+.content-left__search-user .input-group {
+  position: relative;
+  margin: 15px 10px;
+}
+.content-left__search-user .input-group input {
+  width: 90%;
+  padding: 10px 15px;
+  border: 1px solid #333333;
+  border-radius: 7px;
+  outline: none;
+}
+.content-left__search-user .input-group input:focus ~ label, .content-left__search-user .input-group input:valid ~ label {
+  top: 0;
+  font-size: 12px;
+  background-color: #FFFFFF;
+}
+.content-left__search-user .input-group label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777777;
+  padding: 0 7px;
+  pointer-events: none;
+  transition: 0.3s linear;
+}
+.content-left__topic {
+  border: 2px solid;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+.content-left__topic--head {
+  background-color: #085C94;
+  color: #FFFFFF;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.content-right {
+  padding: 0 10px;
+  flex: 2;
+}
+.content-right h3 {
+  background-color: #085C94;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+.content-right .repositories-container {
+  padding: 10px;
+  height: 75vh;
+  overflow: auto;
+}
+.content-right .repositories-container::-webkit-scrollbar {
+  width: 10px;
+}
+.content-right .repositories-container::-webkit-scrollbar-track {
+  background-color: #F0F0F0;
+}
+.content-right .repositories-container::-webkit-scrollbar-thumb {
+  background-color: rgba(8, 92, 148, 0.9);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.content-right .repositories-container::-webkit-scrollbar-thumb:hover {
+  background-color: #085C94;
+}
+.content-right .repositories-container .repo {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-radius: 7px;
+  background-color: #333333;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s linear;
+}
+.content-right .repositories-container .repo:hover {
+  background-color: #000000;
+  scale: 1.01;
+}
+.content-right .repositories-container .repo .repo-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.content-right .repositories-container .repo .repo-desc .true {
+  color: #129A67;
+}
+.content-right .repositories-container .repo .repo-desc .false {
+  font-size: 20px;
+  color: #FF0000;
+}
+
+.myBtn {
+  border: none;
+  outline: none;
+  width: 70%;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 0 0 10px 10px;
+  border-radius: 7px;
+  background-color: #333333;
+  color: #FFFFFF;
+  transition: 0.3s linear;
+}
+.myBtn:hover {
+  opacity: 0.8;
+}
+.myBtn:active {
+  opacity: 1;
+}/*# sourceMappingURL=main.css.map */

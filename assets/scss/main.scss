@@ -1,0 +1,173 @@
+// Import All Using Helpers Directory
+@use "helpers/usinghelpers" as *;
+@use "helpers/global";
+
+// Begining Of The Project
+
+.header {
+  background-color: color(blu-color-01);
+  padding: 25px;
+  position: relative;
+  margin-bottom: 50px;
+  @include flex(null, null, center, center, null);
+  &__head {
+    font-size: 40px;
+    background-color: color(blk-color-02);
+    color: color(wht-color-01);
+    padding: 10px 20px;
+    border-radius: 7px;
+  }
+  .goback {
+    position: absolute;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    left: 100px;
+    bottom: 15px;
+    background-color: color(red-color-01);
+    color: color(wht-color-01);
+    @include transition;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 1;
+    }
+    i {
+      margin-right: 5px;
+    }
+  }
+}
+
+.content {
+  @include flex(null, null, space-between, flex-start, 20px);
+  &-left {
+    flex: 1;
+    &__search-user {
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid color(blk-color-02);
+      background-color: color(wht-color-01);
+      &--head {
+        background-color: color(blu-color-01);
+        color: color(wht-color-01);
+        padding: 10px;
+        margin-bottom: -2px;
+      }
+      .input-group {
+        position: relative;
+        margin: 15px 10px;
+        input {
+          width: 90%;
+          padding: 10px 15px;
+          border: 1px solid color(blk-color-02);
+          border-radius: 7px;
+          outline: none;
+          &:focus~label,
+          &:valid~label {
+            top: 0;
+            font-size: 12px;
+            background-color: color(wht-color-01);
+          }
+        }
+        label {
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: color(gry-color-03);
+          padding: 0 7px;
+          pointer-events: none;
+          @include transition;
+        }
+      }
+    }
+    &__topic {
+      border: 2px solid color(blkc-olor-02);
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: color(wht-color-01);
+      &--head {
+        background-color: color(blu-color-01);
+        color: color(wht-color-01);
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &-right {
+    padding: 0 10px;
+    flex: 2;
+    h3 {
+      background-color: color(blu-color-01);
+      color: color(wht-color-01);
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 7px;
+      margin-bottom: 10px;
+    }
+    .repositories-container {
+      padding: 10px;
+      height: 75vh;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: color(gry-color-01);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(color(blu-color-01), 0.9);
+        @include transition;
+        &:hover {
+          background-color: color(blu-color-01);
+        }
+      }
+      .repo {
+        margin-bottom: 20px;
+        padding: 15px 20px;
+        border-radius: 7px;
+        background-color: color(blk-color-02);
+        color: color(wht-color-01);
+        cursor: pointer;
+        @include flex(null, null, space-between, center, null);
+        @include transition;
+        &:hover {
+          background-color: color(blk-color-01);
+          scale: 1.01;
+        }
+        .repo-desc {
+          @include flex(null, null, space-between, center, 10px);
+          .true {
+            color: color(grn-color-02);
+          }
+          .false {
+            font-size: 20px;
+            color: color(red-color-01);
+          }
+        }
+      }
+    }
+  }
+}
+
+.myBtn {
+  border: none;
+  outline: none;
+  width: 70%;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 0 0 10px 10px;
+  border-radius: 7px;
+  background-color: color(blk-color-02);
+  color: color(wht-color-01);
+  @include transition;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 1;
+  }
+}
